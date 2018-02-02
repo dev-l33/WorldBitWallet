@@ -12,7 +12,6 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/mystyle.css">
   <link rel="stylesheet" href="css/common.css">
-  <link rel="stylesheet" href="css/style-responsive.css">
   <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Open+Sans|Source+Sans+Pro" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.6/sweetalert2.min.css">
@@ -130,13 +129,13 @@
                     <div class="col-md-5 col-lg-5 col-sm-12">
                       <div class="checkbox">
                         <label for="check_save_key">
-                          <input type="checkbox" name="checkboxes" id="check_save_key" value="1"> I Understand
+                          <input type="checkbox" name="checkboxes" id="check_save_key" required> I Understand
                         </label>
-                        <a id="button_download_key" class="bg-clr1 orange_btn" href="#">DOWNLOAD KEYS
+                        <button id="button_download_key" class="bg-clr1 orange_btn button-normal">DOWNLOAD KEYS
                           <span>
                             <img style="height: 15px;" src="images/icon/right-icon.png">
                           </span>
-                        </a>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -174,7 +173,7 @@
             <div class="col-xs-12 col-sm-12 col-lg-4 col-md-4">
               <div class="step3-left white-bg">
                 <div class="step3-bdr mb-20">
-                  <h5 class="dspl-in-blc clr4 fnt-bld txt-upr ml-10">ICO Wallet</h5>
+                  <h5 class="dspl-in-blc clr4 fnt-bld txt-upr ml-10" style="line-height: normal;">ICO Wallet</h5>
                   <ol class="f-rght breadcrumb m-0 pt-0 pb-0">
                     <li>
                       <a id="link_export_key" class="white" href="#">Export Keys</a>
@@ -220,7 +219,7 @@
                 <div class="step3-bdr mb-20">
                   <h5 class=" clr4 fnt-bld txt-upr ml-10 m-0">SEND TOKENS</h5>
                 </div>
-                <a href="#" class="clr5 m-10 pt-20">Please fill out KYC info to enable Send button </a>
+                <a href="https://worldbit.com/kyc" target="_blank" class="clr5 m-10 pt-20">Please fill out KYC info to enable Send button </a>
                 <p class="m-10 clr4">
                   <i>Allow basic WorldBit Explorer app usage without sign in. New embedded image capture camera. Implement external
                     wallet import. Add USD estimated prices at wallet and items.</i>
@@ -371,7 +370,7 @@
     <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
 
     <script>
-      var tokens_for_one_eth = 300;
+      var tokens_for_one_eth = 290;
       var tokenPrice = 1 / tokens_for_one_eth;
       tokenPrice = tokenPrice.toFixed(5);
 

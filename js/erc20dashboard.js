@@ -135,7 +135,7 @@
 											'error'
 										);
 									} else {
-										reportAffiliate($("#amount").val(), value1);
+										reportAffiliate(d.result, $("#amount").val(), value1);
 									}
 
 									fetchTransactionLog(openkey);
@@ -830,21 +830,28 @@
 		});
 	}
 
-	function reportAffiliate(token_amount, eth_amount) {
+	function reportAffiliate(txhash, token_amount, eth_amount) {
 		$.ajax({
 			type: "GET",
-			url: "https://affiliate.worldbit.com/information/add_commision",
+			url: "https://affiliate.worldbit.com/tx",
 			data: {
-				ref: 1,
-				qty: token_amount,
-				price: eth_amount * parseInt($("#price_usd").html())
+				ref: getRefIDFromUrl(),
+				hash: txhash,
+				user: g('name'),
+				wbt: token_amount,
+				eth: eth_amount
 			},
-			dataType: 'json',
-
 			success: function (d) {
 				console.log("report Affiliate", d);
 			}
 		});
+	}
+
+	function getRefIDFromUrl() {
+		var url_string = window.location.href;
+		var url = new URL(url_string);
+		console.log("refID is ", url.searchParams.get("refid"));
+		return url.searchParams.get("refid");
 	}
 
 	$(document).ready(function () {
@@ -874,12 +881,12 @@
 			if ($('#check_save_key').is(':checked')) {
 				sv("WorldBit.keys", exportKeystore());
 			} else {
-				swal(
-					'Attention',
-					'Please check "I understand"',
-					'error'
-				);
-				$("#pre_pass").focus();
+				// swal(
+				// 	'Attention',
+				// 	'Please check "I understand"',
+				// 	'error'
+				// );
+				// $("#pre_pass").focus();
 			}
 		});
 
