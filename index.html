@@ -30,15 +30,8 @@
             <img class="wow fadeInLeft" src="images/icon/msg.png">
           </div>
           <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
-            <h4 class="clr4 fnt-bld txt-upr">WorldBit ICO Wallet</h4>
-            <p>In order to participate in our ICO please complete this three-step process.
-              <span>
-                <b class="clr4">STEP 1:</b> Set up your WorldBit Wallet below (or import your wallet string). </span>
-              <span>
-                <b class="clr4">STEP 2:</b> Write down AND download your 12-word key. </span>
-              <span>
-                <b class="clr4">STEP 3:</b> Contribute ETH in order to have your tokens appear in your WorldBit Wallet. </span>
-            </p>
+            <h4 data-i18n="title" class="clr4 fnt-bld txt-upr">Title</h4>
+            <p class="usage-step">Usage Step</p>
           </div>
         </div>
 
@@ -49,37 +42,35 @@
 
                 <div class="form-group">
                   <div class="col-md-6 col-lg-6 col-sm-12">
-                    <input placeholder="Enter Name" class="form-control" id="name" type="text" required>
+                    <input data-i18n="[placeholder]enter_name" class="form-control" id="name" type="text" required>
                   </div>
                   <div class="col-md-6 col-lg-6 col-sm-12">
-                    <input placeholder="Enter Email Address" class="form-control" id="email" type="email" required>
+                    <input data-i18n="[placeholder]enter_email" class="form-control" id="email" type="email" required>
                   </div>
                 </div>
 
                 <div class="form-group">
                   <div class="col-md-6 col-lg-6 col-sm-12">
-                    <input placeholder="Create a Password" class="form-control" id="password" type="password" required>
+                    <input data-i18n="[placeholder]create_password" class="form-control" id="password" type="password" required>
                   </div>
                   <div class="col-md-6 col-lg-6 col-sm-12">
-                    <input placeholder="Confirm Password" class="form-control" id="confirm_password" type="password" required>
+                    <input data-i18n="[placeholder]confirm_password" class="form-control" id="confirm_password" type="password" required>
                   </div>
                 </div>
                 <div class="form-group">
                   <div class="col-md-6 col-lg-6 col-sm-12">
-                    <p>The password is only used when you buy tokens in the wallet. We do not keep your keys, please save them.
-                      The Wallet String in the textfile you are downloading is your only access back into this sytem, so
-                      do not destroy this file, and back it up. Desktop use is recommened.</p>
+                    <p data-i18n="password_desc">Password Desc</p>
                   </div>
                   <div class="col-md-6 col-lg-6 col-sm-12">
                     <div class="checkbox">
                       <label for="checkbox_agree_tos">
-                        <input type="checkbox" name="checkboxes" id="checkbox_agree_tos" required> I agree to the
-                        <a href="https://wallet.worldbit.com/terms.htm" target="_blank">Terms of Sale</a> for WorldBit tokens
+                        <input type="checkbox" name="checkboxes" id="checkbox_agree_tos" required>
+                        <span id="span_agree_tos">Agree to TOS</span>
                       </label>
-                      <button id="btn_continue_step1" type="submit" class="bg-clr1 orange_btn button-normal" href="#">Continue</button>
+                      <button data-i18n="continue" id="btn_continue_step1" type="submit" class="bg-clr1 orange_btn button-normal" href="#">Continue</button>
                     </div>
                     <div class="col-md-6 col-lg-6 col-sm-12">
-                      <span id="link_import_key" onclick="importkey();" class="clr4" style="font-size: 25px; font-weight: 400; cursor: pointer;">Import Key</sapn>
+                      <span data-i18n="import_key" id="link_import_key" onclick="importkey();" class="clr4" style="font-size: 25px; font-weight: 400; cursor: pointer;">Import Key</sapn>
                     </div>
                   </div>
                 </div>
@@ -96,29 +87,15 @@
             <img class="wow fadeInLeft" src="images/icon/msg.png">
           </div>
           <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
-            <h4 class="clr4 fnt-bld txt-upr">ICO Wallet</h4>
-            <p>In order to participate in our ICO please complete this three-step process.
-              <span>
-                <b class="clr4">STEP 1:</b> Set up your WorldBit Wallet below (or import your wallet string). </span>
-              <span>
-                <b class="clr4">STEP 2:</b> Write down AND download your 12-word key. </span>
-              <span>
-                <b class="clr4">STEP 3:</b> Contribute ETH in order to have your tokens appear in your WorldBit Wallet. </span>
-            </p>
+            <h4 data-i18n="title" class="clr4 fnt-bld txt-upr">Title</h4>
+            <p class="usage-step">Usage Step</p>
           </div>
         </div>
-
-
-
         <div class="row wallet-frm">
           <div class="col-xs-12">
             <div class="step2 p-20 mb-30">
-              <div class="">
-                <p>Write down these 12 words using pen and paper. Please do not just copy and paste your passphrase and store
-                  it on your phone. If you cannot write it down on paper and
-                  <b class="clr4">store it somewhere safe</b>, please wait to create your wallet until you can do so.
-                  <b class="clr4">WITHOUT FOLLOWING THESE INSTRUCTIONS YOU RISK LOSING ALL FUNDS. WE CANNOT RESTORE THEM.</b>
-                </p>
+              <div>
+                <p id="mnemonic_phase_desc">Mnemonic Phase Desc</p>
               </div>
               <form class="form-horizontal">
                 <div class="form-content">
@@ -130,9 +107,9 @@
                     <div class="col-md-5 col-lg-5 col-sm-12">
                       <div class="checkbox">
                         <label for="check_save_key">
-                          <input type="checkbox" name="checkboxes" id="check_save_key" required> I Understand
+                          <input type="checkbox" name="checkboxes" id="check_save_key" required><sapn data-i18n="understand">I Understand</sapn>
                         </label>
-                        <button id="button_download_key" class="bg-clr1 orange_btn button-normal">DOWNLOAD KEYS
+                        <button id="button_download_key" class="bg-clr1 orange_btn button-normal"><span data-i18n="download_keys">Download Keys</span>
                           <span>
                             <img style="height: 15px;" src="images/icon/right-icon.png">
                           </span>
@@ -154,38 +131,30 @@
             <img class="wow fadeInLeft" src="images/icon/msg.png">
           </div>
           <div class="col-xs-12 col-sm-9 col-md-10 col-lg-10">
-            <h4 class="clr4 fnt-bld txt-upr">ICO Wallet</h4>
-            <p>In order to participate in our ICO please complete this three-step process.
-              <span>
-                <b class="clr4">STEP 1:</b> Set up your WorldBit Wallet below (or import your wallet string). </span>
-              <span>
-                <b class="clr4">STEP 2:</b> Write down AND download your 12-word key. </span>
-              <span>
-                <b class="clr4">STEP 3:</b> Contribute ETH in order to have your tokens appear in your WorldBit Wallet.</span>
-            </p>
+            <h4 data-i18n="title" class="clr4 fnt-bld txt-upr">Title</h4>
+            <p class="usage-step">Usage Step</p>
           </div>
         </div>
 
 
 
         <div class="row">
-          <div class="">
-
+          <div>
             <div class="col-xs-12 col-sm-12 col-lg-4 col-md-4">
               <div class="step3-left white-bg">
                 <div class="step3-bdr mb-20">
-                  <h5 class="dspl-in-blc clr4 fnt-bld txt-upr ml-10" style="line-height: normal;">ICO Wallet</h5>
+                  <h5 data-i18n="wallet" class="dspl-in-blc clr4 fnt-bld txt-upr ml-10" style="line-height: normal;">ICO Wallet</h5>
                   <ol class="f-rght breadcrumb m-0 pt-0 pb-0">
                     <li>
-                      <a id="link_export_key" class="white" href="#">Export Keys</a>
+                      <a data-i18n="export_keys" id="link_export_key" class="white" href="#">Export Keys</a>
                     </li>
                     <li>
-                      <a id="link_exit" class="white" href="#">Exit</a>
+                      <a data-i18n="exit" id="link_exit" class="white" href="#">Exit</a>
                     </li>
                   </ol>
                 </div>
                 <div class="clear pos-rel">
-                  <a href="#" onclick='window.location.reload()' class="pos-abs m-10 clr5" style="right: 0; bottom: 0;">Refresh</a>
+                  <a data-i18n="refresh" href="#" onclick='window.location.reload()' class="pos-abs m-10 clr5" style="right: 0; bottom: 0;">Refresh</a>
                   <h2 class="m-0 ml-10 clr4">
                     <b>
                       <span id="balance_tokens">0.00</span> WBT</b>
@@ -210,19 +179,17 @@
                   <a onclick="shapeshift_click(this, event);" href="#">
                     <img src="images/xs_light_ss.png" class="ss-button">
                   </a>
-                  <p>0.5 ETH minimum is
-                    <strong>only</strong> for using ShapeShift to convert tokens to ETH. You may send any amount of ETH to this wallet
-                    address to purchase any amount WBT!</p>
+                  <p id="deposit_desc"></p>
                 </div>
               </div>
 
               <div class="step3-left-btm white-bg">
                 <div class="step3-bdr mb-20">
-                  <h5 class=" clr4 fnt-bld txt-upr ml-10 m-0">SEND TOKENS</h5>
+                  <h5 data-i18n="send_tokens" class=" clr4 fnt-bld txt-upr ml-10 m-0">SEND TOKENS</h5>
                 </div>
-                <a href="https://worldbit.com/kyc" target="_blank" class="clr5 m-10 pt-20">Please fill out KYC info to enable Send button </a>
+                <a data-i18n="fill_kyc" href="https://worldbit.com/kyc" target="_blank" class="clr5 m-10 pt-20">Please fill out KYC info to enable Send button.</a>
                 <p class="m-10 clr4">
-                  <i>This is not necessary to use this wallet, as no tokens can be transferred until after the ICO. KYC is for
+                  <i data-i18n="fill_kyc_desc">This is not necessary to use this wallet, as no tokens can be transferred until after the ICO. KYC is for
                     sending tokens after the ICO and does not affect the functionality of this wallet.</i>
                 </p>
               </div>
@@ -231,7 +198,7 @@
             <div class="col-xs-12 col-sm-12 col-lg-4 col-md-4">
               <div class="step3-mid white-bg">
                 <div class="step3-bdr mb-20">
-                  <h5 class=" clr4 fnt-bld txt-upr ml-10 m-0">Your Wallet Address</h5>
+                  <h5 data-i18n="your_wallet_address" class=" clr4 fnt-bld txt-upr ml-10 m-0">Your Wallet Address</h5>
                 </div>
                 <div class="p-10 cntr" style="background: #f1f4f7;">
                   <p id="openkey" class="m-0 clr4 text-center">0x</p>
@@ -243,13 +210,13 @@
 
               <div class="step3-mid-btm white-bg">
                 <div class="step3-bdr mb-20">
-                  <h5 class=" clr4 fnt-bld txt-upr ml-10 m-0">SELL TOKENS</h5>
+                  <h5 data-i18n="sell_tokens" class=" clr4 fnt-bld txt-upr ml-10 m-0">SELL TOKENS</h5>
                 </div>
 
                 <h2 class="clr4 fnt-bld ml-10 m-0">1 WBT =
                   <span id="token_price"></span> ETH</h2>
                 <p class="ml-10 clr4">
-                  <i>Not Available Untill After The ICO.</i>
+                  <i data-i18n="sell_tokens_desc">Not Available Untill After The ICO.</i>
                 </p>
               </div>
             </div>
@@ -257,10 +224,10 @@
             <div class="col-xs-12 col-sm-12 col-lg-4 col-md-4">
               <div class="step3-right white-bg">
                 <div class="step3-bdr mb-20">
-                  <h5 class=" clr4 fnt-bld txt-upr ml-10 m-0">BUY WORLDBIT TOKEN WITH ETH</h5>
+                  <h5 data-i18n="buy_tokens" class=" clr4 fnt-bld txt-upr ml-10 m-0">BUY WORLDBIT TOKEN WITH ETH</h5>
                 </div>
 
-                <p class="m-0 ml-10 clr4">Choose Amount of Token(s) you want to buy</p>
+                <p data-i18n="choose_amount" class="m-0 ml-10 clr4">Choose Amount of Token(s) you want to buy</p>
 
                 <div class="range m-20">
                   <input type="range" id="range_amount" min="1" step="1" max="250000" value="5000">
@@ -275,7 +242,7 @@
                     </tr>
                   </table>
 
-                  <p class="ml-10 m-0 clr4">Equevalent Fund</p>
+                  <p data-i18n="equivalent_fund" class="ml-10 m-0 clr4">Equivalent Fund</p>
 
                   <table class="mt-20 mb-20 clr4">
 
@@ -309,7 +276,7 @@
                 </div>
 
                 <div class="text-center">
-                  <button id='try2buybtn' class="bg-clr5 white" type="button">BUY NOW
+                  <button id='try2buybtn' class="bg-clr5 white" type="button"><span data-i18n="buy_now">BUY NOW</span>
                     <span>
                       <img src="images/icon/right-icon.png">
                     </span>
@@ -317,8 +284,8 @@
                   <p id="consolebuy" class="console"></p>
                 </div>
                 <div class="mt-20">
-                  <p class="m-10">It may take a few minutes for your ETH to appear in the wallet, please be patient.</p>
-                  <p class="m-10">Remember to keep a little ETH in this wallet! During the ICO you will be able to deploy portals and objects
+                  <p data-i18n="buy_desc1" class="m-10">It may take a few minutes for your ETH to appear in the wallet, please be patient.</p>
+                  <p data-i18n="buy_desc2" class="m-10">Remember to keep a little ETH in this wallet! During the ICO you will be able to deploy portals and objects
                     into the WorldBit system for only the cost of ETH gas!</p>
                 </div>
               </div>
@@ -326,28 +293,27 @@
           </div>
         </div>
 
-
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="step3-btm white-bg">
               <div class="step3-bdr mb-20">
-                <h5 class=" clr4 fnt-bld txt-upr ml-10 m-0">MARKET RATES</h5>
+                <h5 data-i18n="market_rates" class=" clr4 fnt-bld txt-upr ml-10 m-0">MARKET RATES</h5>
               </div>
               <p class="ml-10 clr4">
-                <i>Not Available Untill After The ICO.</i>
+                <i data-i18n="market_rates_desc">Not Available Untill After The ICO.</i>
               </p>
             </div>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
             <div class="step3-btm white-bg">
               <div class="step3-bdr mb-20">
-                <h5 class=" clr4 fnt-bld txt-upr ml-10 m-0">ETH MARKET RATES</h5>
+                <h5 data-i18n="eth_market_rates" class=" clr4 fnt-bld txt-upr ml-10 m-0">ETH MARKET RATES</h5>
               </div>
 
               <p class="ml-10 clr4">
-                <b>Price USD:</b>
+                <b data-i18n="price_usd">Price USD:</b>
                 <span id="price_usd">...</span>
-                <b>Price BTC:</b>
+                <b data-i18n="price_btc">Price BTC:</b>
                 <span id="price_btc">...</span>
             </div>
           </div>
@@ -360,12 +326,22 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/SmoothScroll.js"></script>
-    <script src="js/web3.min.js"></script>
-    <script src="js/lightwallet.min.js"></script>
+    <script type="text/javascript" src="js/web3.min.js"></script>
+    <script type="text/javascript" src="js/lightwallet.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.6/sweetalert2.min.js"></script>
-    <script src="js/erc20dashboard.js?v=23"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.6/sweetalert2.min.js"></script>
+    <script type="text/javascript" src="js/erc20dashboard.js?v=23"></script>
+
+    <script type="text/javascript" src="js/jquery.i18n/src/jquery.i18n.js"></script>
+    <script type="text/javascript" src="js/jquery.i18n/src/jquery.i18n.messagestore.js"></script>
+    <script type="text/javascript" src="js/jquery.i18n/src/jquery.i18n.fallbacks.js"></script>
+    <script type="text/javascript" src="js/jquery.i18n/src/jquery.i18n.language.js"></script>
+    <script type="text/javascript" src="js/jquery.i18n/src/jquery.i18n.parser.js"></script>
+    <script type="text/javascript" src="js/jquery.i18n/src/jquery.i18n.emitter.js"></script>
+    <script type="text/javascript" src="js/jquery.i18n/src/jquery.i18n.emitter.bidi.js"></script>
+    <script type="text/javascript" src="js/i18n.js"></script>
+
     <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
 
     <script>
@@ -401,14 +377,6 @@
         rebalance();
         setInterval(rebalance, 10000);
       });
-    </script>
-    <script>
-      if (localStorage.getItem("privkey")) {
-        $("#info2").html("You use old version of dashboard. Save this key " + localStorage.getItem("privkey") +
-          ". Open myetherwallet.com > login using plain key > and add token " + erc20contract_address +
-          ". Or <a href='#' onclick='localStorage.clear();window.location.reload();return false'>logout</a>"
-        );
-      }
     </script>
 </body>
 

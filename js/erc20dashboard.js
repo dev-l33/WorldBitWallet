@@ -25,13 +25,14 @@
 			$("#consolebuy").html("You need " + amounteth + "+0.02 ETH on balance for this operation");
 		} else {
 			swal({
-				title: 'Are you sure?',
-				text: 'You want buy TOKENS for ' + amounteth + ' ETH?',
+				title: $.i18n('are_you_sure'),
+				text: $.i18n('buy_token_confirm_msg', amounteth),
 				type: 'question',
 				showCancelButton: true,
 				confirmButtonColor: '#44aaff',
 				cancelButtonColor: '#d33',
-				confirmButtonText: 'Yes, Buy it!'
+				confirmButtonText: $.i18n('yes_buy_it'),
+				cancelButtonText: $.i18n('cancel'),
 			}).then((result) => {
 				if (result.value) {
 					$("#consolebuy").html('.:...::');
@@ -89,9 +90,9 @@
 				*/
 
 				swal({
-					title: 'Enter your password',
+					title: $.i18n('enter_password'),
 					input: 'password',
-					inputPlaceholder: 'Enter your password',
+					inputPlaceholder: $.i18n('enter_password'),
 					inputAttributes: {
 						'maxlength': 10,
 						'autocapitalize': 'off',
@@ -296,7 +297,7 @@
 		if (_balance > parseFloat($("#ethfor100hmq").html())) {
 			$("#consolebuy").html("Buy " + $("#amount").val() + " for " + $("#ethfor100hmq").html());
 		} else {
-			$("#consolebuy").html("Topup your balance!");
+			$("#consolebuy").html($.i18n("topup_balance"));
 		}
 	}
 
@@ -389,8 +390,8 @@
 		$("input").css("opacity", "0.4");
 
 		swal({
-			title: 'Please wait...',
-			text: 'Creating wallet...',
+			title: $.i18n('please_wait'),
+			text: $.i18n('creating_wallet'),
 			timer: 20000,
 			type: 'info',
 			allowOutsideClick: false,
@@ -493,15 +494,17 @@
 			value: secretSeed
 		} = await swal({
 			input: 'textarea',
-			title: 'Import Wallet',
-			inputPlaceholder: 'Mnemonic Phrase here',
+			title: $.i18n('import_wallet'),
+			inputPlaceholder: $.i18n('mnemonic_phrase_here'),
 			showCancelButton: true,
+			confirmButtonText: $.i18n('ok'),
+			cancelButtonText: $.i18n('cancel'),
 			inputValidator: (value) => {
 				return new Promise((resolve) => {
 					if (lightwallet.keystore.isSeedValid(value)) {
 						resolve();
 					} else {
-						resolve('Mnemonic Phrase is invalid');
+						resolve($.i18n('mnemonic_phrase_invalid'));
 					}
 				});
 			}
@@ -524,8 +527,8 @@
 		}
 		if (secretSeed && password) {
 			swal({
-				title: 'Please wait...',
-				text: 'Importing wallet...',
+				title: $.i18n('please_wait'),
+				text: $.i18n('importing_wallet'),
 				timer: 20000,
 				type: 'info',
 				allowOutsideClick: false,
