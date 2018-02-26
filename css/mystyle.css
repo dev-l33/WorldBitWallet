@@ -117,7 +117,7 @@ section.bnrtp .progress p
 	color: #ffffff;
 	position: absolute;
 	margin-right: 10px; 
-	z-index: +99;"
+	z-index: +99;
 }
 section.bnrtp .progress .progress-bar
 {
@@ -392,5 +392,7 @@ footer
 	text-align: center !important;
 	padding: 0;
 	margin: 4px 0 0 0;
-	font-size: 12px;
+	font-size: 10px;
 }
+
+.onlyhavetoken {display:none}

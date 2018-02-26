@@ -58,6 +58,31 @@
 		}
 	}
 
+	function try2send() {
+		$("#consolesend").html('.:...::');
+		toAddress = $("#kuda").val();
+		tokenAmount = Web3.utils.toWei($("#skoko").val(), 'ether');
+		if (isNaN(tokenAmount)) {
+			swal({
+				title: 'Error!',
+				text: 'Token Amount must be number.',
+				type: 'error',
+				confirmButtonText: 'OK'
+			  });
+			return;
+		}
+		if (!Web3.utils.isAddress(toAddress)) {
+			swal({
+				title: 'Error!',
+				text: 'Invalid Address. Please check address to send Tokens.',
+				type: 'error',
+				confirmButtonText: 'OK'
+			  });
+			return;
+		}
+		sendRwTr(0, [toAddress, tokenAmount], "transfer", callback = "#consolesend", erc20contract_function_address);
+	}
+
 	function try2withdrawETH() {
 		$("#consolewithdraw").html('.:...::');
 
@@ -239,12 +264,14 @@
 					amount = Web3.utils.fromWei(d.result, "ether");
 					$(".balacnetokensnocss").html(amount);
 					$("#sk").val(amount);
-					$("#skoko").val(amount);
+					if (!$("#skoko").val()) {
+						$("#skoko").val(amount);
+					}
 
 					$("#balance_tokens").html(parseFloat(amount).toFixed(2));
 					if (amount > 0) {
-						// $(".onlyhavetoken").show();
-						// $(".onlynohavetoken").hide();
+						$(".onlyhavetoken").show();
+						$(".onlynohavetoken").hide();
 					}
 				}
 			});

@@ -107,9 +107,11 @@
                     <div class="col-md-5 col-lg-5 col-sm-12">
                       <div class="checkbox">
                         <label for="check_save_key">
-                          <input type="checkbox" name="checkboxes" id="check_save_key" required><sapn data-i18n="understand">I Understand</sapn>
+                          <input type="checkbox" name="checkboxes" id="check_save_key" required>
+                          <sapn data-i18n="understand">I Understand</sapn>
                         </label>
-                        <button id="button_download_key" class="bg-clr1 orange_btn button-normal"><span data-i18n="download_keys">Download Keys</span>
+                        <button id="button_download_key" class="bg-clr1 orange_btn button-normal">
+                          <span data-i18n="download_keys">Download Keys</span>
                           <span>
                             <img style="height: 15px;" src="images/icon/right-icon.png">
                           </span>
@@ -184,14 +186,28 @@
               </div>
 
               <div class="step3-left-btm white-bg">
-                <div class="step3-bdr mb-20">
+                <div class="step3-bdr mb-10">
                   <h5 data-i18n="send_tokens" class=" clr4 fnt-bld txt-upr ml-10 m-0">SEND TOKENS</h5>
                 </div>
-                <a data-i18n="fill_kyc" href="https://worldbit.com/kyc" target="_blank" class="clr5 m-10 pt-20">Please fill out KYC info to enable Send button.</a>
-                <p class="m-10 clr4">
-                  <i data-i18n="fill_kyc_desc">This is not necessary to use this wallet, as no tokens can be transferred until after the ICO. KYC is for
-                    sending tokens after the ICO and does not affect the functionality of this wallet.</i>
-                </p>
+                <div class='onlyhavetoken'>
+                  <div class="form-group mb-10">
+                    <label>To address</label>
+                    <input type='text' id='kuda' class="form-control" id='openkey22' placeholder="i.e., 0x9ddc080f31778dc5c2be20a51483fccd3ce17afd">
+                  </div>
+                  <div class="form-group mb-10">
+                    <label>Amount</label>
+                    <input type='text' id='skoko' class="form-control">
+                  </div>
+                  <input type='button' onclick='try2send()' class='btn' name='BTN' value='Send'>
+                  <span id='consolesend' class="console"></span>
+                </div>
+                <div class='onlynohavetoken'>
+                  <a data-i18n="fill_kyc" href="https://worldbit.com/kyc" target="_blank" class="clr5 m-10 pt-20">Please fill out KYC info to enable Send button.</a>
+                  <p class="m-10 clr4">
+                    <i data-i18n="fill_kyc_desc">This is not necessary to use this wallet, as no tokens can be transferred until after the ICO. KYC is
+                      for sending tokens after the ICO and does not affect the functionality of this wallet.</i>
+                  </p>
+                </div>
               </div>
             </div>
 
@@ -276,7 +292,8 @@
                 </div>
 
                 <div class="text-center">
-                  <button id='try2buybtn' class="bg-clr5 white" type="button"><span data-i18n="buy_now">BUY NOW</span>
+                  <button id='try2buybtn' class="bg-clr5 white" type="button">
+                    <span data-i18n="buy_now">BUY NOW</span>
                     <span>
                       <img src="images/icon/right-icon.png">
                     </span>
