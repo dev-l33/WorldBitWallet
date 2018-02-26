@@ -1,0 +1,68 @@
+{
+	"@metadata": {
+		"authors": [
+			"C. Torres"
+		],
+		"last-updated": "2017-02-8",
+		"locale": "es"
+	},
+	"title": "Monedero WorldBit ICO",
+	"usage-step": "Para participar en nuestro ICO, complete este proceso de tres pasos.<span><b class=\"clr4\">Paso 1:</b> Configure su monedero WorldBit a continuación (o importe su monedero). </span><span><b class=\"clr4\"> Paso 2:</b> Escriba Y descargue su clave de 12 palabras. </span><span><b class=\"clr4\"> Paso 3:</b> Contribuya con ETH para que tus tokens aparezcan en tu monedero WorldBit. </span>",
+    "enter_name": "Nombre",
+    "enter_email": "Correo electrónico",
+    "create_password": "Contraseña",
+    "confirm_password": "Confirma tu contraseña",
+    "password_desc": "La contraseña solo se usa cuando compra los tokens en el monedero. No guardamos sus llaves, por favor sálvalas. La secuencia de palabras del monedero en el archivo de texto que se está descargando es su único acceso de regreso a este sistema, así que no destruya este archivo y haga una copia de seguridad. Se recomienda hacerlo desde un ordenador.",
+    "agree_tos": "Estoy de acuerdo con <a href=\"https://wallet.worldbit.com/terms.htm\" target=\"_blank\">Los Términos de Venta</a> de tokens WorldBit.",
+    "continue": "Continuar",
+    "import_key": "Importar llave",
+
+    "mnemonic_phase_desc": "Escriba estas 12 palabras usando bolígrafo y papel. No copie y pegue su frase de contraseña y guárdela en su teléfono. Si no puede escribirlo en papel y <b class = \"clr4 \"> almacenarlo en un lugar seguro </ b>, espere para crear su monedero cuando que pueda hacerlo. <b class = \"clr4 \"> SIN SEGUIR ESTAS INSTRUCCIONES, USTED TIENE RIESGO PERDER TODOS TUS FONDOS. NO PODEMOS RESTAURARLOS.</b>",
+    "understand" :"Yo he entendido",
+    "download_keys" : "DESCARGAS LLAVES",
+
+    "wallet": "MONEDERO ICO",
+    "export_keys": "EXPORTAR LLAVES",
+    "EXIT": "SALIR",
+    "refresh" : "Recargar",
+    "deposit_desc": "El mínimo de 0,5 ETH es <strong> solo </ strong> para usar ShapeShift para convertir los tokens a ETH. ¡Puede enviar cualquier cantidad de ETH a esta dirección del monedero para comprar cualquier cantidad WBT!",
+
+    "send_tokens": "ENIVAR TOKENS",
+    "fill_kyc": "Por favor, rellene las informaciones de KYC para habilitar el botón de Enviar.",
+    "fill_kyc_desc": "Esto no es necesario para usar este monedero, ya que no se pueden transferir tokens hasta después del ICO. KYC es para enviar tokens después de ICO y no afecta la funcionalidad de este monedero.",
+
+    "your_wallet_address": "TU DIRECCIÓN DEL MONEDERO",
+
+    "sell_tokens": "VENDER TOKENS",
+    "sell_tokens_desc": "No disponible hasta después del ICO.",
+
+    "buy_tokens": "COMPRE TOKENS WORLDBIT CON ETH",
+    "choose_amount": "Elija la cantidad de Token(s) que deseas comprar",
+    "equivalent_fund": "Fondo Equivalente",
+    "buy_now": "COMPRA YA",
+    "buy_desc1": "Su ETH puede tardar unos minutos en aparecer en el monedero, por favor sea paciente.",
+    "buy_desc2": "¡Recuerde mantener un poco de ETH en este monedero! ¡Durante el ICO, podrá implementar portales y objetos en el sistema WorldBit por solo el coste del gas en ETH!",
+
+    "market_rates": "TASAS DE MERCADO",
+    "market_rates_desc": "No disponible hasta después del ICO.",
+
+    "eth_market_rates": "TASAS DE MERCADO ETH",
+    "price_usd": "Precio USD",
+    "price_btc": "Precio BTC",
+
+    "import_wallet": "Importar Monedero",
+    "mnemonic_phrase_here": "Frase mnemotécnica aquí",
+    "mnemonic_phrase_invalid": "La frase mnemotécnica no es válida",
+    "ok": "OK",
+    "cancel": "Cancelar",
+
+    "please_wait": "Por favor espera...",
+    "importing_wallet": "Importando monedero...",
+    "creating_wallet": "Creando monedero...",
+    "topup_balance": "¡Rellena tu saldo!",
+
+    "are_you_sure": "Estas seguro?",
+    "buy_token_confirm_msg": "Quieres comprar TOKENS por $1 ETH?",
+    "yes_buy_it": "Si, Cómpralo!",
+    "enter_password": "Introducir la contraseña"
+}
