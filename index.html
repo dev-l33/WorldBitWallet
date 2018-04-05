@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.6/sweetalert2.min.css">
 
+  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -219,8 +220,12 @@
                 <div class="p-10 cntr" style="background: #f1f4f7;">
                   <p id="openkey" class="m-0 clr4 text-center">0x</p>
                 </div>
-                <div class="text-center mt-50 mb-50">
+                <div class="text-center mt-20 mb-20">
                   <img id='ethqr' src='' width="180px" height="180px">
+                </div>
+                <div class="sharecopy">
+                  <a class="link-share"><i class="fas fa-external-link-alt"></i> SHARE</a>
+                  <a class="link-copy" data-clipboard-text="0x"><i class="far fa-copy"></i> COPY</a>
                 </div>
               </div>
 
@@ -358,6 +363,8 @@
     <script type="text/javascript" src="js/jquery.i18n/src/jquery.i18n.emitter.js"></script>
     <script type="text/javascript" src="js/jquery.i18n/src/jquery.i18n.emitter.bidi.js"></script>
     <script type="text/javascript" src="js/i18n.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+    <script type="text/javascript" src="js/notify.min.js"></script>
 
     <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
 

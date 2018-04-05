@@ -935,6 +935,12 @@
 		});
 
 		$("#openkey").html(openkey);
+		$(".link-copy").attr('data-clipboard-text', openkey);
+		var clipboard = new ClipboardJS('.link-copy');
+		$(".link-copy").click(function() {
+			$("#openkey").notify("Copied!", "success");
+		});
+		$(".link-share").prop("href", "mailto:?subject=WorldBit Wallet Address&body=" + openkey);
 
 		$(".sellnow").hide();
 		var qr_width = 180;
