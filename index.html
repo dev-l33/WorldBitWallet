@@ -10,7 +10,7 @@
   <!-- CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/mystyle.css">
+  <link rel="stylesheet" href="css/mystyle.css?v=1">
   <link rel="stylesheet" href="css/common.css">
   <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Open+Sans|Source+Sans+Pro" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
@@ -353,7 +353,7 @@
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.6/sweetalert2.min.js"></script>
-    <script type="text/javascript" src="js/erc20dashboard.js?v=23"></script>
+    <script type="text/javascript" src="js/erc20dashboard.js?v=25"></script>
 
     <script type="text/javascript" src="js/jquery.i18n/src/jquery.i18n.js"></script>
     <script type="text/javascript" src="js/jquery.i18n/src/jquery.i18n.messagestore.js"></script>
@@ -369,11 +369,8 @@
     <!--[if lt IE 10]><script type="text/javascript" src="js/placeholder.js"></script><![endif]-->
 
     <script>
-      var tokens_for_one_eth = 290;
-      var tokenPrice = 1 / tokens_for_one_eth;
-      tokenPrice = tokenPrice.toFixed(5);
-
-      $("#token_price").html(tokenPrice);
+      var tokenPrice;
+      var tokens_for_one_eth;
       // extrahook = function () {
       // 	if ($("#skoko").val() > 0) {
       // 		$(".sellnow").show();
@@ -384,13 +381,19 @@
       // }
       // disable sell token function now.
       // extrahook();
-      recalc();
 
       $.get(option_etherscan_api + "/api?module=stats&action=ethprice&apikey=" + option_etherscan_api_key, function (d) {
         console.log(d);
         // $("#market_cap_usd").html(d.result.ethusd + " USD");
         $("#price_btc").html(d.result.ethbtc);
         $("#price_usd").html(d.result.ethusd);
+
+        tokens_for_one_eth = parseInt(d.result.ethusd / 1.02);
+        tokenPrice = 1.02 / d.result.ethusd;
+        tokenPrice = tokenPrice.toFixed(5);
+
+        $("#token_price").html(tokenPrice);
+        
         recalc();
       }, "json");
     </script>

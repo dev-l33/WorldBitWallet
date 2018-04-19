@@ -1,7 +1,7 @@
 	if (typeof erc20contract_address == "undefined") {
-		var erc20contract_address = "0xe895ca33788C5812119AE5F5c98A78924931F2D5";
+		var erc20contract_address = "0x030D1a87a36C9442E25416c3D36611Af5c29Eba9";
 		var erc20contract_function_address = "0xe2eB8871aeCaB528E3A36BF8a9b2D9A044b39626";
-		var token_owner_address = "0xe895ca33788c5812119ae5f5c98a78924931f2d5"
+		var token_owner_address = "0x030D1a87a36C9442E25416c3D36611Af5c29Eba9"
 		var option_etherscan_api = 'https://api.etherscan.io'; //change to https://api.etherscan.io for mainnet
 		var option_etherscan_api_key = 'QSUZ77YJZ2H68K6SJKRZSAP7ERYJS51893';
 		var option_registration_enabled = true;
